@@ -5,7 +5,7 @@ export default class AppBar extends React.Component {
 
     return (
       <header>
-        TimeFrame
+        <span>TimeFrame</span>
       </header>
     )
   }

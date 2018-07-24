@@ -30,4 +30,14 @@ describe('app', () => {
 
     expect(app.find('a').props().href).toEqual('/addPerson')
   })
+
+  it('displays a close button on the add new person screen', () => {
+    const app = mount(
+      <MemoryRouter initialEntries={['/addPerson']}>
+        <App/>
+      </MemoryRouter>
+    )
+
+    expect(app.find('a.close').props().href).toEqual('/')
+  })
 })

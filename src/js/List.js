@@ -8,7 +8,7 @@ export default class List extends React.Component {
       <div className="container-view">
         <AppBar/>
         <main>
-          <Link to="/addPerson">
+          <Link to="/addPerson" className="primary">
             Add New Person
           </Link>
         </main>
