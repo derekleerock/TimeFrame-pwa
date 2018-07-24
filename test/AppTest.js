@@ -1,4 +1,4 @@
-import App from '../src/App'
+import App from '../src/js/App'
 
 describe('app', () => {
   it('shallow renders the component', () => {
