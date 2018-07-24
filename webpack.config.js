@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 var config = {
   mode: 'development',
@@ -14,6 +15,12 @@ var config = {
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
+    new CopyWebpackPlugin(
+      [
+        { from: 'src/img/*', to: 'img', flatten: true },
+        { from: 'src/manifest.json', to: ''}
+      ], {}
+    )
   ],
 
   module: {
@@ -30,7 +37,11 @@ var config = {
           'css-loader',
           'sass-loader',
         ]
-      }
+      },
+      {
+        test: /\.png$/,
+        use: [{loader: 'file-loader'},]
+      },
     ],
   },
 }
