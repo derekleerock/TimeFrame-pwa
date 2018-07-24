@@ -1,15 +1,21 @@
 import React from 'react'
-import AppBar from './AppBar'
+import {
+  Route,
+  Switch,
+} from 'react-router-dom'
+
+import List from './List'
+import AddPerson from './AddPerson'
 
 export default class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <AppBar/>
-              <main>
-                <button>Add New Person</button>
-              </main>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path="/" component={List}/>
+          <Route exact path="/addPerson" component={AddPerson}/>
+        </Switch>
+      </div>
+    )
+  }
 }
