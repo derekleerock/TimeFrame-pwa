@@ -1,13 +1,13 @@
 import App from '../src/js/App'
 
 describe('app', () => {
-  it('shallow renders the component', () => {
-    const app = shallow(<App/>)
-    expect(app).toBeDefined()
+  it('displays a header with the title', () => {
+    const app = mount(<App/>)
+    expect(app.text()).toContain("TimeFrame")
   })
 
-  it('mounts the component', () => {
-    const app = mount(<App/>)
-    expect(app).toBeDefined()
+  it('display a button to add a new person', () => {
+    const app = shallow(<App/>)
+    expect(app.find('button').text()).toEqual('Add New Person')
   })
 })

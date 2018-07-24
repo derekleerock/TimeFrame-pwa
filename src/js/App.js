@@ -6,7 +6,9 @@ export default class App extends React.Component {
         return (
             <div>
                 <AppBar/>
-                Hello React App!
+              <main>
+                <button>Add New Person</button>
+              </main>
             </div>
         )
     }
