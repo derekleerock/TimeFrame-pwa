@@ -3,12 +3,14 @@ import React from 'react'
 export default class AddPerson extends React.Component {
   render() {
     return (
-      <div>
+      <div className="add-person-view">
         <header>Add A Person</header>
-        <form>
-          <label>Name</label>
-          <input placeholder={"enter a name"}/>
-        </form>
+        <main>
+          <form>
+            <label>Name</label>
+            <input placeholder={"enter a name"}/>
+          </form>
+        </main>
       </div>
     )
   }

@@ -1,0 +1,32 @@
+a {
+  display: block;
+  &:hover, &:focus {
+    background-color: lighten($accent, 15);
+  }
+}
+
+input, a {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px darken($base, 25);
+  }
+}
+
+label {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+input, a {
+  transition: all 0.5s ease;
+  margin: 1rem;
+  background-color: $accent;
+  color: $base;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-decoration: none;
+  text-align: center;
+}

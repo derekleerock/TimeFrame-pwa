@@ -1,0 +1,6 @@
+div.add-person-view {
+  @extend %container-view;
+  form {
+    @extend %full-height-container;
+  }
+}

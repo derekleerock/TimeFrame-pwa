@@ -2,3 +2,18 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
+%container-view {
+  @extend %full-height-container;
+
+  main {
+    @include scrollable-y();
+    @extend %full-height-container;
+  }
+}
+
+%full-height-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
