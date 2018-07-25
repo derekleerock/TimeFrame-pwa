@@ -6,6 +6,7 @@ global.expect = expect
 
 import sinon from 'sinon'
 global.sinon = sinon
+global.sandbox = sinon.createSandbox()
 
 import { mount, render, shallow } from 'enzyme'
 global.mount = mount

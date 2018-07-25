@@ -2,17 +2,11 @@ import {mountAppAtLocation} from './mountAtLocation'
 import * as PersonRepo from '../src/js/PersonRepo'
 import {clickButton, setInputText} from './simulateUserActions'
 
-let sandbox = sinon.createSandbox()
-
 describe('add person screen', () => {
   let addPersonScreen
 
   beforeEach(() => {
     addPersonScreen = mountAppAtLocation('/addPerson')
-  })
-
-  afterEach(() => {
-    sandbox.restore()
   })
 
   it('displays a close button on the add new person screen', () => {
