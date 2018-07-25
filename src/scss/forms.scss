@@ -19,12 +19,25 @@ label {
   text-transform: uppercase;
 }
 
-input, a.primary, button {
+input {
+  transition: all 0.5s ease;
+  height: 3rem;
+  border: none;
+  background-color: $accent;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  color: $base;
+  text-transform: capitalize;
+}
+
+a.primary, button {
   transition: all 0.5s ease;
   margin: 1rem;
   background-color: $accent;
   color: $base;
   font-weight: 500;
+  font-size: 14px;
   border-radius: 10px;
   border: none;
   box-sizing: border-box;
