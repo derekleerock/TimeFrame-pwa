@@ -1,4 +1,4 @@
-@mixin scrollable-y() {
+%scrollable-y() {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -7,7 +7,7 @@
   @extend %full-height-container;
 
   main {
-    @include scrollable-y();
+    @extend scrollable-y;
     @extend %full-height-container;
   }
 }
