@@ -4,7 +4,7 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import List from './List'
+import PersonList from './PersonList'
 import AddPerson from './AddPerson'
 
 export default class App extends React.Component {
@@ -12,7 +12,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/" component={List}/>
+          <Route exact path="/" component={PersonList}/>
           <Route exact path="/addPerson" component={AddPerson}/>
         </Switch>
       </div>

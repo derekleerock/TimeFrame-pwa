@@ -2,7 +2,7 @@ import React from 'react'
 import AppBar from './AppBar'
 import {Link} from 'react-router-dom'
 
-export default class List extends React.Component {
+export default class PersonList extends React.Component {
   render() {
     return (
       <div className="container-view">
