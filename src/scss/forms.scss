@@ -1,11 +1,11 @@
-a {
+a.primary {
   display: block;
   &:hover, &:focus {
     background-color: lighten($accent, 15);
   }
 }
 
-input, a {
+input, a.primary {
   &:focus {
     outline: none;
     box-shadow: 0 0 0 1px darken($base, 25);
@@ -15,9 +15,11 @@ input, a {
 label {
   margin-left: 1rem;
   margin-top: 1rem;
+  color: darken($base, 25);
+  text-transform: uppercase;
 }
 
-input, a {
+input, a.primary {
   transition: all 0.5s ease;
   margin: 1rem;
   background-color: $accent;
