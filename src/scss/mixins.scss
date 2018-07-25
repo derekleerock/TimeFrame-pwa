@@ -1,4 +1,4 @@
-%scrollable-y() {
+%scrollable-y {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -7,7 +7,7 @@
   @extend %full-height-container;
 
   main {
-    @extend scrollable-y;
+    @extend %scrollable-y;
     @extend %full-height-container;
   }
 }
