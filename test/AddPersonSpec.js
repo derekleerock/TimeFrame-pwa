@@ -1,10 +1,18 @@
 import {mountAppAtLocation} from './mountAtLocation'
+import * as PersonRepo from '../src/js/PersonRepo'
+import {clickButton, setInputText} from './simulateUserActions'
+
+let sandbox = sinon.createSandbox()
 
 describe('add person screen', () => {
   let addPersonScreen
 
   beforeEach(() => {
     addPersonScreen = mountAppAtLocation('/addPerson')
+  })
+
+  afterEach(() => {
+    sandbox.restore()
   })
 
   it('displays a close button on the add new person screen', () => {
@@ -21,5 +29,16 @@ describe('add person screen', () => {
 
   it('displays the input field with a placeholder', () => {
     expect(addPersonScreen.find('input').props().placeholder).toEqual('enter a name')
+  })
+
+  it('saves the new person when clicking the add person button', () => {
+    let personRepoSpy = sandbox.stub(PersonRepo, 'createPerson')
+
+
+    setInputText(addPersonScreen, 'personName', 'Frank')
+    clickButton(addPersonScreen, 'Add Person')
+
+
+    sandbox.assert.calledWith(personRepoSpy, {name: 'Frank'})
   })
 })

@@ -12,4 +12,4 @@ global.mount = mount
 global.render = render
 global.shallow = shallow
 
-require.extensions['.svg'] = () => {};
+require.extensions['.svg'] = () => {}

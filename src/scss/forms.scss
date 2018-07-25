@@ -1,11 +1,11 @@
-a.primary {
+a.primary, button {
   display: block;
   &:hover, &:focus {
     background-color: lighten($accent, 15);
   }
 }
 
-input, a.primary {
+input, a.primary, button {
   &:focus {
     outline: none;
     box-shadow: 0 0 0 1px darken($base, 25);
@@ -19,7 +19,7 @@ label {
   text-transform: uppercase;
 }
 
-input, a.primary {
+input, a.primary, button {
   transition: all 0.5s ease;
   margin: 1rem;
   background-color: $accent;
